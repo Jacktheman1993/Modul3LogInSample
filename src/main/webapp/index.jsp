@@ -46,6 +46,9 @@
                 </td>
             </tr>
         </table>
+        <a href="FrontController?command=help"><button>Få hjælp til din betilling</button></a>
+        
+        
         <% String error = (String) request.getAttribute( "error");
            if ( error != null) { %>
            <H2>Error!!</h2>
