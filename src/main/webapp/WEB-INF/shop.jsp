@@ -1,4 +1,4 @@
 <%@include file="//includes/header_user.jsp" %>
         <h1>Hello <%=request.getParameter( "email" )%> </h1>
-        You are now logged in as a customer of our wonderful site.
+        <h1>Welcome to lego Shop</h1>
 <%@include file="//includes/footer_user.jsp" %>
