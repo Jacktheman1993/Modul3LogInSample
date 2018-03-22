@@ -4,7 +4,9 @@
     Author     : kasper
 --%>
 
+
 <%@page import="FunctionLayer.User"%>
+<%@page import="FunctionLayer.Order"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -21,4 +23,5 @@
             </ul>
         </nav>
   <% User user = (User)session.getAttribute("user");  %>
+  <% Order order = (Order) session.getAttribute("order");%>
         

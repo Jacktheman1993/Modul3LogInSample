@@ -9,10 +9,10 @@ package FunctionLayer;
  *
  * @author The Overlord
  */
-public class order
+public class Order
 {
 
-    public order(int heigth, int length, int width)
+    public Order(int heigth, int length, int width)
     {
         this.heigth = heigth;
         this.length = length;

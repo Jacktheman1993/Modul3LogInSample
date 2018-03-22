@@ -3,7 +3,7 @@ package DBAccess;
 import static DBAccess.UserMapper.enkelorder;
 import FunctionLayer.LoginSampleException;
 import FunctionLayer.User;
-import FunctionLayer.order;
+import FunctionLayer.Order;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -72,7 +72,7 @@ public class UserMapper
         }
     }
 
-    public static order enkelorder(int height, int length, int width)
+    public static Order enkelorder(int height, int length, int width)
     {
         try
         {
@@ -88,8 +88,8 @@ public class UserMapper
                 height = rs.getInt("height");
                 length = rs.getInt("lenght");
                 width = rs.getInt("width");
-                order Order = new order(height, length, width);
-                return Order;
+                Order order = new Order(height, length, width);
+                return order;
             }
             else
             {
@@ -104,21 +104,21 @@ public class UserMapper
         return null;
     }
 
-    public static void createOrder(order Order)
+    public static void createOrder(Order order)
     {
          try
         {
             Connection con = Connector.connection();
             String SQL = "INSERT INTO order (height, length, width) VALUES (?, ?, ?)";
             PreparedStatement ps = con.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, Order.getHeigth());
-            ps.setInt(2, Order.getLength());
-            ps.setInt(3, Order.getWidth());
+            ps.setInt(1, order.getHeigth());
+            ps.setInt(2, order.getLength());
+            ps.setInt(3, order.getWidth());
             ps.executeUpdate();
             ResultSet ids = ps.getGeneratedKeys();
             ids.next();
             int id = ids.getInt(1);
-            Order.setOrderID(id);
+            order.setOrderID(id);
         }
         catch (Exception ex)
         {

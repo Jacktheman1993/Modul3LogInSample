@@ -6,8 +6,8 @@
     Velkommen <%=user.getEmail()%>
 
 
-<form name="login" action="FrontController" method="POST">
-    <input type="hidden" name="command" value="house_lego">
+<form name="shop" action="FrontController" method="POST">
+    <input type="hidden" name="command" value="addedOrder">
     <h3>Length:</h3>
     <input type="number" name="length" value="0">
     <br>
