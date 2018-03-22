@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
  */
 public class Shop extends Command
 {
-     @Override
+      @Override
     String execute( HttpServletRequest request, HttpServletResponse response ) throws LoginSampleException {
         return "shop";
     }

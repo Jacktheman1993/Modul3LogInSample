@@ -4,6 +4,7 @@
     Author     : kasper
 --%>
 
+<%@page import="FunctionLayer.User"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,8 +15,10 @@
     <body>
         <nav>   
             <ul>
-                <li><a href="FrontController?command=shop"><button>Shop</button></a></li>
-                <li><a href="FrontController?command=profil"><button>Profil</button></a></li>
+                <li><a href="FrontController?command=shop" style="float: left"><button>Shop</button></a></li>
+                <li><a href="FrontController?page" style="float: left"><button>Min Profil</button></a></li>
+                <li><a href="FrontController?command=help" style="float: left"><button>Få hjælp til din betilling</button></a>   </li>
             </ul>
         </nav>
+  <% User user = (User)session.getAttribute("user");  %>
         
