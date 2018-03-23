@@ -23,5 +23,5 @@
             </ul>
         </nav>
   <% User user = (User)session.getAttribute("user");  %>
-  <% Order order = (Order) session.getAttribute("order");%>
+  <% Order order = (Order) request.getAttribute("order");%>
         

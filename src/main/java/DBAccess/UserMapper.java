@@ -72,7 +72,7 @@ public class UserMapper
         }
     }
 
-    public static Order enkelorder(int height, int length, int width)
+    public static Order enkelorder(int orderID, int height, int length, int width)
     {
         try
         {
@@ -88,7 +88,7 @@ public class UserMapper
                 height = rs.getInt("height");
                 length = rs.getInt("lenght");
                 width = rs.getInt("width");
-                Order order = new Order(height, length, width);
+                Order order = new Order(5,height, length, width);
                 return order;
             }
             else
@@ -117,8 +117,8 @@ public class UserMapper
             ps.executeUpdate();
             ResultSet ids = ps.getGeneratedKeys();
             ids.next();
-            int id = ids.getInt(1);
-            order.setOrderID(id);
+            int orderID = ids.getInt(1);
+            order.setOrderID(orderID);
         }
         catch (Exception ex)
         {

@@ -12,8 +12,9 @@ package FunctionLayer;
 public class Order
 {
 
-    public Order(int heigth, int length, int width)
+    public Order(int orderID, int heigth, int length, int width)
     {
+        this.orderID = orderID;
         this.heigth = heigth;
         this.length = length;
         this.width = width;
@@ -23,6 +24,7 @@ public class Order
      private int length;
      private int width;
 
+   
     public int getOrderID()
     {
         return orderID;

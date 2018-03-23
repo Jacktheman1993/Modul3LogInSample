@@ -17,5 +17,14 @@ public class LogicFacade {
         UserMapper.createUser( user );
         return user;
     }
-
+    public static Order enkelOrder(int orderID, int height, int length, int width)
+    {
+        return UserMapper.enkelorder(orderID, height, length, width);
+    }
+    public static Order createOrder(int orderID, int height, int length, int width)
+    {
+        Order order = new Order(orderID, height, length, width);
+        UserMapper.createOrder(order);
+        return order;
+    }
 }
